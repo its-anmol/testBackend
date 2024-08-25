@@ -15,6 +15,7 @@ const getHighestLowercaseAlphabet = (alphabets) => {
 
 app.post('/bfhl', (req, res) => {
   try {
+    const { data } = req.body;
     console.log(req.body);
     if (!Array.isArray(data)) {
       throw new Error('Invalid input: data must be an array');
